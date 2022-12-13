@@ -1,0 +1,94 @@
+$(document).ready(function(){
+
+	// AGREGANDO CLASE ACTIVE AL PRIMER ENLACE ====================
+	$('.new-categories .new-category_item[category="all"]').addClass('newcls');
+
+	// FILTRANDO PRODUCTOS  ============================================
+
+	$('.new-category_item').click(function(){
+		var catProduct = $(this).attr('category');
+		console.log(catProduct);
+
+		// AGREGANDO CLASE ACTIVE AL ENLACE SELECCIONADO
+		$('.new-category_item').removeClass('newcls');
+		$(this).addClass('newcls');
+
+		// OCULTANDO PRODUCTOS =========================
+		$('.new-prod').css('transform', 'scale(0)');
+		function hideProduct(){
+			$('.new-prod').hide();
+		} setTimeout(hideProduct,650);
+
+		// MOSTRANDO PRODUCTOS =========================
+		function showProduct(){
+			$('.new-prod[category="'+catProduct+'"]').show();
+			$('.new-prod[category="'+catProduct+'"]').css('transform', 'scale(1)');
+		} setTimeout(showProduct,650);
+	});
+
+	// MOSTRANDO TODOS LOS PRODUCTOS =======================
+
+	$('.new-category_item[category="all"]').click(function(){
+		function showAll(){
+			$('.new-prod').show();
+			$('.new-prod').css('transform', 'scale(1)');
+		} setTimeout(showAll,650);
+	});
+
+	
+	// creación de productos
+
+	const products = [
+		{cat:"cpu", nombre:"Intel® Core™ i3-12100 Processor Alder Lake", precio:"$24.999,00", imagen:"../media/products/i3-12100.jpg" },
+		{cat:"cpu", nombre:"Intel® Core™ i5-12600K Processor Alder Lake", precio:"$79.999,00", imagen:"../media/products/i5-12600k.jpeg"},
+		{cat:"cpu", nombre:"Intel® Core™ i7-12700K Processor Alder Lake", precio:"$110.019,00", imagen:"../media/products/i7-12700k.jpg"},
+		{cat:"cpu", nombre:"Procesador AMD Ryzen 5 5600X", precio:"$49.038,00", imagen:"../media/products/r5-5600x.jpg"},
+		{cat:"cpu", nombre:"Procesador AMD Ryzen 7 5700x", precio:"69.990,00", imagen:"../media/products/r7-5700x.jpeg"},
+		{cat:"per", nombre:"Auriculares HyperX Cloud Flight Wireless", precio:"$18.120,00", imagen:"../media/products/hyperx-cloudflight.jpg"},
+		{cat:"per", nombre:"WebCam Logitech C920 FULL HD", precio:"$15.999,00", imagen:"../media/products/logi-c920.jpg"},
+		{cat:"per", nombre:"Mouse Logitech g203 RGB Gaming", precio:"$3900,00", imagen:"../media/products/logi-g203.png"},
+		{cat:"ram", nombre:"Memoria Kingston Fury Beast 16 GB (2x8) 3600Mhz", precio:"$39.507,00", imagen:"../media/products/ramkingston.webp"},
+		{cat:"ram", nombre:"Memoria RAM Vengeance RGB 16 GB (2x8) 3200Mhz", precio:"$28.207,00", imagen:"../media/products/ramcorsair.webp"},
+		{cat:"mb", nombre:"Mother Gigabyte H610m H 1.3 Ddr4 1700", precio:"$27.038,00", imagen:"../media/products/h510.webp"},
+		{cat:"mb", nombre:"Mother Gigabyte Z690 Ud Ddr5 Socket 1700", precio:"$60.293,00", imagen:"../media/products/z690.webp"},
+		{cat:"mb", nombre:"Motherboard Asus A520m-k Ddr4 Socket Am4", precio:"$18.900,00", imagen:"../media/products/a520.webp"},
+		{cat:"mb", nombre:"Motherboard Asus Tuf Gaming X570-plus Wi-fi Bt Am4 M.2", precio:"$81.248,00", imagen:"../media/products/x570.webp"},
+		
+	];
+	
+	
+	// agregar productos al html
+
+	let contenedor = document.getElementById("contenedor");
+	
+	products.forEach(product =>{
+	let div = document.createElement("div");
+	div.innerHTML = `
+	<div class="new-prod" category=${product.cat}>
+	                    <div class="new-prod-img">
+	                        <img class="new-prodimg" src="${product.imagen}" alt="${product.nombre}">
+	                    </div>
+	                    <div class="new-text-prod">
+	                        <p class="new-title-product">${product.nombre}</p>
+	                        <p class="new-price-product">${product.precio}</p>
+	                        <div class="new-buy">
+	                            <p class="new-buy-text">Comprar</p>
+	                        </div>
+	                    </div>
+	                </div>
+	`;
+	contenedor.append(div);
+	});
+
+	function stringPrecio(num){
+
+		let ret = num.toString;
+		if(ret.lenght>3){
+			ret = "precio caro";
+		}
+		return ret;
+	}
+
+
+});
+

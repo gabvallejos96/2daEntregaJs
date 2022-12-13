@@ -1,0 +1,107 @@
+@import '../base/variables';
+@import '../base/mixin';
+
+.backgroundHeader {
+
+    background: $bg-footer-header-color;
+    width: 100%;
+    height: 100px;
+}
+
+section {
+    margin-bottom: 100px;
+    word-wrap: break-word;
+}
+
+.headerContainer1 {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-rows: 75px;
+    grid-column-gap: 0px;
+}
+
+.divHeader1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.logoHeader {
+    width: 150px;
+    height: auto;
+}
+
+.textLogo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin: auto auto;
+}
+
+
+.divHeader2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.buscador {
+    width: 50vw;
+    height: 30px;
+}
+
+.faticon {
+    width: 40px;
+    height: 40px;
+}
+ 
+.divHeader3 {
+    grid-area: 1 / 3 / 2 / 4;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.menu {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.menu {
+    text-align: center;
+}
+
+.menu a {
+    position: relative;
+    color: $color-menu;
+}
+
+.menu a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: $color-menu;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu a:hover::before {
+    transform: scaleX(1);
+    color: $color-menu;
+}
+
+.topStatic {
+    background: white;
+    height: 175px;
+    z-index: 2;
+    top: 0;
+}
+
+.centrar{
+    margin-top: 15px;
+}
