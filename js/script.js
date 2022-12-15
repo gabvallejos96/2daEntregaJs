@@ -52,8 +52,7 @@ $(document).ready(function(){
 		{cat:"mb", nombre:"Mother Gigabyte H610m H 1.3 Ddr4 1700", precio:"$27.038,00", imagen:"../media/products/h510.webp"},
 		{cat:"mb", nombre:"Mother Gigabyte Z690 Ud Ddr5 Socket 1700", precio:"$60.293,00", imagen:"../media/products/z690.webp"},
 		{cat:"mb", nombre:"Motherboard Asus A520m-k Ddr4 Socket Am4", precio:"$18.900,00", imagen:"../media/products/a520.webp"},
-		{cat:"mb", nombre:"Motherboard Asus Tuf Gaming X570-plus Wi-fi Bt Am4 M.2", precio:"$81.248,00", imagen:"../media/products/x570.webp"},
-		
+		{cat:"mb", nombre:"Motherboard Asus Tuf Gaming X570-plus Wi-fi Bt Am4 M.2", precio:"$81.248,00", imagen:"../media/products/x570.webp"},	
 	];
 	
 	
@@ -80,6 +79,19 @@ $(document).ready(function(){
 	contenedor.append(div);
 	});
 
+	let pregunta = prompt("Que producto busca?");
+	let flag = true;
+
+	for(let i=0; i<products.length; i++){
+		if (products[i].nombre.toUpperCase().includes(pregunta.toLocaleUpperCase())){
+			alert(`El producto ${products[i].nombre} se encuentra en la categoria ${products[i].cat}`)
+			flag = false;
+		} else if(i == products.length-1 && flag==true){
+			alert(`No se encontró el producto`);
+		}
+	
+	}
+
 	function stringPrecio(num){
 
 		let ret = num.toString;
@@ -88,6 +100,7 @@ $(document).ready(function(){
 		}
 		return ret;
 	}
+
 
 
 });
