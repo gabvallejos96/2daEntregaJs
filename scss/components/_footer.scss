@@ -3,7 +3,7 @@
 
 .footerContainer{
     @include flex(flex, space-around, center); 
-    height: 120px;
+    height: 100px;
     width: 100%;
     background: $bg-footer-header-color;
 }
@@ -40,13 +40,13 @@
 }
 
 .logoRedes {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 
 .imgf3 {
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
 }
 
 .divf3 {
