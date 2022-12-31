@@ -21,6 +21,7 @@ let carrito = JSON.parse(localStorage.getItem("arreglo"));
 console.log(localStorage.length);
 console.log(carrito.length);
 let contenido = document.getElementById("carritoITC");
+let productosDuplicados = [];
 
 if(carrito.length == 0){
      contenido.innerHTML=`El carrito esta vacio`;   
@@ -30,26 +31,21 @@ if(carrito.length == 0){
         vectorTemp.push(products.find(item => item.id == id));
         });
         let total = 0;
-        let productosDuplicados = [];
+    
         vectorTemp.forEach(item =>{
-            let contador = 0;
-            
-            carrito.forEach(id =>{
-                if(id === item.id){
-                    contador++;
-                }
-            if(contador === 1){
+            let str = item.precio;
+                str = str.replace("$","");
+                str = str.replace(".","");
+                str = str.replace(",00","");
+                console.log(str);
                 contenido.innerHTML+=`
                 <p>${item.nombre}, Cantidad 1, Precio: ${item.precio}</p>
                 `;
-                total+=item.precio;
-            } 
-            if(contador>1){
-
-            }
-                
-            })
+                total+=parseFloat(str);
+          
         })
+        contenido.innerHTML+=`
+        <p>Total: $${total}</p>`;
 
     }
 
