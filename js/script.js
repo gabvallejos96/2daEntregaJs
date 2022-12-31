@@ -61,7 +61,7 @@ $(document).ready(function(){
 	localStorage.setItem("arreglo", JSON.stringify(carrito));
 
 
-	function asd(product){
+	function cargar(product){
 		let contenedor = document.getElementById("contenedor");
 		product.forEach(product =>{
 			let div = document.createElement("div");
@@ -89,7 +89,7 @@ $(document).ready(function(){
 	
 
 
-	asd(products);
+	cargar(products);
 
 	function contador(id){
 		let cont = 0;
@@ -114,7 +114,7 @@ $(document).ready(function(){
 			carrito.push(id);
 			localStorage.setItem("arreglo", JSON.stringify(carrito));
 			eliminarElemento("contenedor");
-			asd(products);
+			cargar(products);
 			console.log(carrito);
 		   }
 
