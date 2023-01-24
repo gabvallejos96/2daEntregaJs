@@ -1,0 +1,196 @@
+@media only screen and (min-width:993px) {
+    main {
+        margin-bottom: 180px;
+    }
+
+    .contactoContainer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .centrado {
+        display: flex;
+        gap: 5px;
+    }
+
+    .divContact1 {
+        width: 40%;
+        margin-left: 10px;
+    }
+
+    .divContact2 {
+        width: 40%;
+    }
+
+    .pCont {
+        margin-bottom: 15px;
+    }
+
+
+    form {
+        /* Centrar el formulario en la página */
+        margin: 0 auto;
+        width: auto;
+        /* Esquema del formulario */
+        padding: 1em;
+        border: 1px solid #CCC;
+        border-radius: 1em;
+    }
+
+    .formies .ul .li {
+        display: flex;
+        gap: 5px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    form li+li {
+        margin-top: 1em;
+    }
+
+    .formDesp {
+        margin-bottom: 15px;
+    }
+
+    .only-mobile {
+        display: none;
+    }
+
+    .productsContainer {
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 100px;
+        grid-row-gap: 0px;
+        margin-top: 20px;
+        margin-bottom: 150px;
+    }
+
+    .categoriesCont {
+        grid-area: 1 / 1 / 2 / 2;
+        margin-left: 20px;
+    }
+
+    .productsCont {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    /* style nos */
+
+    .nosotrosCont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 600px;
+        grid-column-gap: 100px;
+        grid-row-gap: 0px;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .divNos1 {
+        grid-area: 1 / 1 / 2 / 2;
+        text-align: center;
+    }
+
+    .divNos2 {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: 10px;
+    }
+
+    .pNosotros {
+        text-indent: 1.5em;
+    }
+
+    .logoNosotros {
+        width: 300px;
+        height: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .dvi1 {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 1s;
+        position: absolute;
+    }
+
+    .divNos2:hover .dvi1 {
+        opacity: 1;
+    }
+
+    .imgNosotros {
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+    }
+
+    .imagesNosotros {
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    .footerContainer {
+        position: fixed;
+        bottom: 0px;
+    }
+
+    .menu a {
+        color: white;
+    }
+
+    .nav-link:hover{
+        color: white;
+    }
+
+
+    .ubiContainer {
+        display: grid;
+        grid-template-columns: 4fr 8FR;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .divUbi1 {
+        grid-area: 1 / 1 / 2 / 2;
+        text-align: center;
+    }
+
+    .divUbi2 {
+        grid-area: 1 / 2 / 2 / 3;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .mapaUbi {
+        width: 100%;
+        height: 100%;
+        border-radius: 3%;
+    }
+
+    .logoUbi {
+        width: 300px;
+        height: auto;
+    }
+}

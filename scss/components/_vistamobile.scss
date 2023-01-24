@@ -1,0 +1,139 @@
+@media only screen and (max-width:992px) {
+
+    .only-desktop {
+        display: none;
+    }
+
+    .divFooter2 {
+        width: 100%;
+    }
+
+
+    .productsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .logoRedes {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footerContainer {
+        position: relative;
+    }
+
+    .backgroundHeader {
+        background: none;
+        height: auto;
+    }
+
+    .topStatic {
+        height: auto;
+    }
+
+    .headerContainer1 {
+        display: inline;
+    }
+
+    a {
+        margin-left: 15px;
+    }
+
+    .buscador {
+        width: 70vw;
+    }
+
+    .product-container {
+        scale: 90%;
+    }
+
+    .scroll-mobile {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .novedades-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main-products {
+        width: 100vw;
+    }
+
+
+
+    .topStatic {
+        position: relative;
+    }
+
+    .probando {
+        height: 150px;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    .d-mobilef {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        margin: auto auto;
+        align-items: center;
+    }
+
+    .productsContainer {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .imgNosotros {
+        width: 100vw;
+    }
+
+    .divNos1,
+    .divUbi1 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .logoUbi {
+        width: 100vw;
+    }
+
+    .ubiContainer {
+        margin-top: -80px;
+    }
+
+    .mapaUbi {
+        width: 95vw;
+    }
+
+    .divUbi2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .divContact1 {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .divContact2 {
+        width: 100%;
+    }
+
+    .contactoContainer {
+        margin-top: -90px;
+        width: 100vw;
+    }
+
+    .productsCont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}

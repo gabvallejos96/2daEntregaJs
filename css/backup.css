@@ -1,0 +1,687 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* estilos header */
+
+.backgroundHeader {
+
+    background: rgb(26, 104, 248);
+    width: 100%;
+    height: 100px;
+}
+
+section {
+    margin-bottom: 100px;
+    word-wrap: break-word;
+}
+
+.headerContainer1 {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-rows: 75px;
+    grid-column-gap: 0px;
+}
+
+.divHeader1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.logoHeader {
+    width: 150px;
+    height: auto;
+}
+
+.textLogo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin: auto auto;
+}
+
+
+.divHeader2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.buscador {
+    width: 50vw;
+    height: 30px;
+}
+
+.faticon {
+    width: 40px;
+    height: 40px;
+}
+ 
+.divHeader3 {
+    grid-area: 1 / 3 / 2 / 4;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.menu {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.menu {
+    text-align: center;
+}
+
+.menu a {
+    position: relative;
+    color: black;
+}
+
+.menu a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu a:hover::before {
+    transform: scaleX(1);
+    color: white;
+}
+
+.topStatic {
+    background: white;
+    height: 175px;
+    z-index: 2;
+}
+
+/* estilos main */
+.parrafoMain {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    margin: 20px 0px 10px 15px;
+    text-decoration: underline;
+}
+
+.products-hor {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    margin-left: 20px;
+}
+
+.product-container {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    border: solid 3px black;
+    border-radius: 4%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.lastItem {
+    margin-right: 20px;
+}
+
+.img-products {
+    width: 400px;
+    height: 400px;
+}
+
+.products {
+    width: auto;
+    height: 85%;
+    object-fit: contain;
+}
+
+.text-products {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: auto;
+    background-color: black;
+    border-radius: 4%;
+    opacity: 0.4;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descProduct {
+    display: none;
+}
+
+.products-hor2 {
+    display: flex;
+}
+
+.products-hor::-webkit-scrollbar {
+    width: 3px;
+}
+
+.products-hor::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 50px;
+}
+
+.products-hor::-webkit-scrollbar-thumb:hover {
+    background: rgb(246, 146, 16);
+    border-radius: 50px;
+}
+
+/* estilos footer */
+
+.footerContainer {
+    display: grid;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background: rgb(26, 104, 248);
+    align-items: center;
+}
+
+.divFooter1 {
+    width: 20%;
+    top: auto;
+    bottom: auto;
+}
+
+.divFooter2 {
+    width: 40%;
+}
+
+.divFooter3 {
+    width: 30%;
+}
+
+.parrafoFooter {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    left: auto;
+    right: auto;
+    margin: auto 0px;
+
+}
+
+.logoRedes {
+    width: 32px;
+    height: 32px;
+}
+
+.imgf3 {
+    width: 24px;
+    height: 24px;
+}
+
+.divf3 {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+.slider ul {
+    padding: 0;
+    display: flex;
+    width: 400%;
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
+    -webkit-animation: cambio 20s infinite;
+    -webkit-animation-direction: alternate;
+}
+
+.logoRedes:hover {
+    transform: scale(1.5);
+}
+
+@-webkit-keyframes cambio {
+    0% {
+        margin-left: 0%;
+    }
+
+    20% {
+        margin-left: 0%;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0%;
+    }
+
+    20% {
+        margin-left: 0%;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+.slider li {
+    list-style: none;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+}
+
+.imgPubli {
+    width: 300px;
+    height: 100px;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+
+/* vista mobile */
+@media only screen and (max-width:992px) {
+
+    .only-desktop {
+        display: none;
+    }
+
+    .divFooter2 {
+        width: 100%;
+    }
+
+
+    .productsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .logoRedes {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footerContainer {
+        position: relative;
+    }
+
+    .backgroundHeader {
+        background: none;
+        height: auto;
+    }
+
+    .topStatic {
+        height: auto;
+    }
+
+    .headerContainer1 {
+        display: inline;
+    }
+
+    a {
+        margin-left: 15px;
+    }
+
+    .buscador {
+        width: 70vw;
+    }
+
+    .product-container {
+        scale: 90%;
+    }
+
+    .scroll-mobile {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .novedades-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main-products {
+        width: 100vw;
+    }
+
+
+
+    .topStatic {
+        position: relative;
+    }
+
+    .probando {
+        height: 150px;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    .d-mobilef {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        margin: auto auto;
+        align-items: center;
+    }
+
+    .productsContainer {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .imgNosotros {
+        width: 100vw;
+    }
+
+    .divNos1,
+    .divUbi1 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .logoUbi {
+        width: 100vw;
+    }
+
+    .ubiContainer {
+        margin-top: -80px;
+    }
+
+    .mapaUbi {
+        width: 95vw;
+    }
+
+    .divUbi2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .divContact1 {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .divContact2 {
+        width: 100%;
+    }
+
+    .contactoContainer {
+        margin-top: -90px;
+        width: 100vw;
+    }
+
+    .productsCont {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+/* vista desktop */
+
+.automargin {
+    margin: 0px auto;
+}
+
+@media only screen and (min-width:993px) {
+    main {
+        margin-bottom: 200px;
+    }
+
+    .contactoContainer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .centrado {
+        display: flex;
+        gap: 5px;
+    }
+
+    .divContact1 {
+        width: 40%;
+        margin-left: 10px;
+    }
+
+    .divContact2 {
+        width: 40%;
+    }
+
+    .pCont {
+        margin-bottom: 15px;
+    }
+
+
+    form {
+        /* Centrar el formulario en la página */
+        margin: 0 auto;
+        width: auto;
+        /* Esquema del formulario */
+        padding: 1em;
+        border: 1px solid #CCC;
+        border-radius: 1em;
+    }
+
+    .formies .ul .li {
+        display: flex;
+        gap: 5px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    form li+li {
+        margin-top: 1em;
+    }
+
+    .formDesp {
+        margin-bottom: 15px;
+    }
+
+    .only-mobile {
+        display: none;
+    }
+
+    .productsContainer {
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 100px;
+        grid-row-gap: 0px;
+        margin-top: 20px;
+        margin-bottom: 150px;
+    }
+
+    .categoriesCont {
+        grid-area: 1 / 1 / 2 / 2;
+        margin-left: 20px;
+    }
+
+    .productsCont {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    /* style nos */
+
+    .nosotrosCont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 600px;
+        grid-column-gap: 100px;
+        grid-row-gap: 0px;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .divNos1 {
+        grid-area: 1 / 1 / 2 / 2;
+        text-align: center;
+    }
+
+    .divNos2 {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: 10px;
+    }
+
+    .pNosotros {
+        text-indent: 1.5em;
+    }
+
+    .logoNosotros {
+        width: 300px;
+        height: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .dvi1 {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 1s;
+        position: absolute;
+    }
+
+    .divNos2:hover .dvi1 {
+        opacity: 1;
+    }
+
+    .imgNosotros {
+        width: 100%;
+        height: 100%;
+        border-radius: 5%;
+    }
+
+    .imagesNosotros {
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    .footerContainer {
+        position: fixed;
+        bottom: 0px;
+    }
+
+    .menu a {
+        color: white;
+    }
+
+
+    .ubiContainer {
+        display: grid;
+        grid-template-columns: 4fr 8FR;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .divUbi1 {
+        grid-area: 1 / 1 / 2 / 2;
+        text-align: center;
+    }
+
+    .divUbi2 {
+        grid-area: 1 / 2 / 2 / 3;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .mapaUbi {
+        width: 100%;
+        height: 100%;
+        border-radius: 3%;
+    }
+
+    .logoUbi {
+        width: 300px;
+        height: auto;
+    }
+}

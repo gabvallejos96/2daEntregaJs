@@ -1,0 +1,132 @@
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+
+.newcls {
+    color: blue;
+    font-style:oblique;
+}
+
+.new-catemenu{
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.new-product-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: gainsboro;
+}
+
+.new-categories {
+    width: 15%;
+    height:fit-content;
+    background-color: white;
+    margin-top: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 1px 1px;
+}
+
+.new-products {
+    width: 80%;
+    margin-top: 10px;
+}
+
+.new-prod {
+    height: 220px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 50px;
+    background-color: white;
+    box-shadow: 1px 1px 3px;
+    transition: all 0.4s;
+    position: relative;
+}
+
+.new-prod-img {
+    height: 180px;
+    width: 180px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.new-prodimg{
+    width: 100%;
+    height: auto;
+}
+
+.new-prodimg:hover{
+    scale: 1.1;
+}
+
+.new-text-prod {
+    height: 200px;
+    width: auto;
+}
+
+.new-buy {
+    width: 140px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.new-buy:hover{
+    cursor: pointer;
+}
+
+.new-buy-text {
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    padding: 0px 10px;
+}
+
+.new-price-product {
+    font-size: 24px;
+}
+
+.new-title-product {
+    font-size: 20px;
+}
+
+.new-catmen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@media only screen and (max-width: 992px) {
+    .new-categories,.new-products{
+        width: 98%;
+    }
+
+    .new-product-container{
+        display: block;
+    }
+
+    .new-catemenu,.title-product{
+        font-size: 18px;
+    }
+
+}

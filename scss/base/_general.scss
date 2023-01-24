@@ -1,0 +1,44 @@
+@import './variables';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.imgmodal{
+    width: 100px;
+    height: 100px;
+}
+
+
+section {
+    word-wrap: break-word;
+}
+
+main{
+    margin-bottom: $footer-size;
+}
+
+@font-face {
+    font-family:"comic sans";
+    src: url();
+    font-display: swap;
+}
+
+// .productsCont::-webkit-scrollbar-thumb {
+//     background-color: blue;    /* color of the scroll thumb */
+//     border-radius: 20px;       /* roundness of the scroll thumb */
+//     border: 3px solid orange;  /* creates padding around scroll thumb */
+//   }
+
+html::-webkit-scrollbar {
+    width: 4px;               /* width of the entire scrollbar */
+  }
+  
+ 
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid black;  /* creates padding around scroll thumb */
+  }
