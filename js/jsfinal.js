@@ -46,9 +46,7 @@ $(document).ready(function(){
 let botonComprar = document.getElementById('comprarProductos');
 botonComprar.addEventListener("click", () => comprar());
 
-// carrito
-var carrito = [];
-localStorage.setItem("arreglo", JSON.stringify(carrito));
+
 
 let botonCarrito = document.getElementById("carritoDeCompras");
 botonCarrito.addEventListener("click", () => cargarCarrito());
